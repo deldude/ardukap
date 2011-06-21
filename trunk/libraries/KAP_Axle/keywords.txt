@@ -1,0 +1,9 @@
+KAP_Axle	KEYWORD1
+init	KEYWORD2
+move	KEYWORD2
+reset	KEYWORD2
+setMax	KEYWORD2
+setMin	KEYWORD2
+setCenter	KEYWORD2
+setDegree	KEYWORD2
+setType	KEYWORD2
