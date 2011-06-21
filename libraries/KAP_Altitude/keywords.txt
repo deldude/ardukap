@@ -1,0 +1,4 @@
+KAP_Altitude	KEYWORD1
+init	KEYWORD2
+measureCurrent	KEYWORD2
+measureGround	KEYWORD2
