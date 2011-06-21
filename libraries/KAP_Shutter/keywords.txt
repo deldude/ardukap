@@ -1,0 +1,3 @@
+KAP_Shutter	KEYWORD1
+init	KEYWORD2
+click	KEYWORD2
