@@ -1,4 +1,5 @@
 #include <KAP_Shutter.h>
+#include <Servo.h>
 
 KAP_Shutter shutter;
 
