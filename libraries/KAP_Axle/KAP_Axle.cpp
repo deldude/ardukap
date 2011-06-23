@@ -47,7 +47,7 @@ KAP_Axle::~KAP_Axle()
 }
 
 // Public Methods //////////////////////////////////////////////////////////////
-void KAP_Axle::init(byte Type, byte Pin, byte Min, byte Center, byte Max, byte Degree)
+void KAP_Axle::init(byte Type, byte Pin, byte Min, int Center, byte Max, byte Degree)
 {
     Angle = Center;
     myservo.attach(Pin);
@@ -56,7 +56,13 @@ void KAP_Axle::init(byte Type, byte Pin, byte Min, byte Center, byte Max, byte D
 
 void KAP_Axle::reset(void)
 {
-    myservo.write(Center);
+    if(Center > 1000)
+    {
+      myservo.writeMicroseconds(Center);
+    }else
+    {
+      myservo.write(Center);
+    }    
     delay(15);
 }
 
@@ -91,7 +97,7 @@ void KAP_Axle::setMin(byte val)
   Min = val;
 }
 
-void KAP_Axle::setCenter(byte val)
+void KAP_Axle::setCenter(int val)
 {
   Center = val;
 }
