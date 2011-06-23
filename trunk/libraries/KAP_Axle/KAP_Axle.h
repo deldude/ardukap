@@ -31,19 +31,19 @@ class KAP_Axle
 	public:
 		KAP_Axle();
 		~KAP_Axle();
-		void init(byte Type, byte Pin, byte Min, byte Center, byte Max, byte Degree);
+		void init(byte Type, byte Pin, byte Min, int Center, byte Max, byte Degree);
 		void reset();
 		void move(int dir);
 		void setMax(byte val);
 		void setMin(byte val);
-		void setCenter(byte val);
+		void setCenter(int val);
 		void setDegree(byte val);
 	private:
   	  	#define NORMAL 1
      	#define CONTINIOUS 2
 		byte Max;
 		byte Min;
-		byte Center;
+		int Center;
 		byte Degree;
 		byte Type;
 		byte Angle;
