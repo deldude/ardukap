@@ -12,6 +12,6 @@ void setup()
 
 void loop() 
 {
-	axle.move(1);
+	axle.moveAbsolute(1);
 	delay(1000);
 }

@@ -66,7 +66,7 @@ void KAP_Axle::reset(void)
     delay(15);
 }
 
-void KAP_Axle::move(int dir)
+void KAP_Axle::moveRelative(int dir)
 {
     int move = Degree * dir;
     if(Type == CONTINIOUS)
@@ -86,6 +86,17 @@ void KAP_Axle::move(int dir)
       reset();
     }
 }
+
+void KAP_Axle::moveAbsolute(int deg)
+{
+    if((deg > Min) && (deg < Max))
+    {
+        Angle = deg;
+        myservo.write(Angle);
+        delay(15);        
+    }
+}
+
 
 void KAP_Axle::setMax(byte val)
 {

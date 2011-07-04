@@ -33,7 +33,8 @@ class KAP_Axle
 		~KAP_Axle();
 		void init(byte Type, byte Pin, byte Min, int Center, byte Max, byte Degree);
 		void reset();
-		void move(int dir);
+		void moveRelative(int dir);
+		void moveAbsolute(int deg);
 		void setMax(byte val);
 		void setMin(byte val);
 		void setCenter(int val);
